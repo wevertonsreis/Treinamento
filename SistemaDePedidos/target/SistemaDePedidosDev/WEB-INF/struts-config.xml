@@ -3,28 +3,24 @@
 
 <struts-config> 
         
-         <form-beans>
-        	<form-bean name="requestForm" type="com.system.forms.RequestForm"/>
+        <form-beans>
         	<form-bean name="loginForm" type="com.system.forms.LoginForm"/>
         	<form-bean name="addProductForm" type="com.system.forms.AddProductForm"/>
         </form-beans>
         
         <global-forwards>
-        
-        
         	<forward name="login" path="/login.jsp"/>
         	<forward name="index" path="/index.jsp"/>
         	<forward name="requests" path="/requests.jsp"/>
+        	<forward name="addProduct" path="/addProduct.do"/>
         	<forward name="okEndRequest" path="/okEndRequest.jsp"/>
         	<forward name="errorEndRequest" path="/errorEndRequest.jsp"/>
         	<forward name="errorAlterRequest" path="/errorAlterRequest.jsp"/>
-        	<forward name="addProduct" path="/addProduct.do"/>
         	<forward name="loadItemsRequest" path="/loadItemsRequest.do"/>
         	<forward name="loadProduct" path="/loadProduct.do"/>	
         	<forward name="loadRequest" path="/loadRequest.do"/>
         	<forward name="endRequest" path="/endRequest.do"/>
         	<forward name="removeItem" path="/removeItem.do"/>
-        	<forward name="listItemsRequest" path="/listItemsRequest.do"/>
         	<forward name="newRequest" path="/newRequest.do"/>
         	<forward name="saveRequest" path="/saveRequest.do"/>
         </global-forwards>
@@ -60,14 +56,7 @@
         			name="addProductForm"
         			type="com.system.actions.LoadProductAction"
         			validate="true"/>	
-        			
-        	<action path="/listItemsRequest"
-        			input="/index.jsp"
-        			scope="session"
-        			name="addProductForm"
-        			type="com.system.actions.ListItemsRequestAction"
-        			validate="true"/>
-        			
+		
         	<action path="/endRequest"
         			input="/index.jsp"
         			scope="session"
@@ -127,5 +116,5 @@
        	 </action-mappings>
         
         <message-resources parameter="com.system.resource.MessageResources"/>
-        
+
 </struts-config> 

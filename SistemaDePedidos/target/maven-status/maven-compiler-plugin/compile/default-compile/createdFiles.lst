@@ -14,7 +14,6 @@ com\system\actions\SaveRequestAction.class
 com\system\actions\LoadItemsRequestAction.class
 com\system\actions\LoginAction.class
 com\system\actions\AddProductAction.class
-com\system\actions\ListItemsRequestAction.class
 com\system\forms\AddProductForm.class
 com\system\actions\NewRequestAction.class
 com\system\actions\LoadRequestAction.class
