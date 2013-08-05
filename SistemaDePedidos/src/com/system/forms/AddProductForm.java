@@ -17,6 +17,10 @@ import com.system.validations.Cnpj;
 
 public class AddProductForm extends ActionForm {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -495195036931344735L;
 	private Request req;
 	private String cnpj;
 	private List<Product> listProducts = new ArrayList<Product>();

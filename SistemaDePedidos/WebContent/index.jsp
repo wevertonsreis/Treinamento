@@ -4,41 +4,38 @@
 
 <html:html>
 	<head>
-		<title>Sistema de Pedidos</title>
+		<title><bean:message key="label.system.request"/></title>
 		<link rel="stylesheet" type="text/css" href="style2.css">
 	</head>
 	<body>
 	<div align="center">
-		<h1>Sistema de Pedidos</h1>
+		<h1><bean:message key="label.system.request"/></h1>
 		
 		<html:form styleId="addProductForm" action="/addProduct">
-			
-					<h4>Adcionar Produto</h4>
+					<h4><bean:message key="label.add.product"/></h4>
 					<div id="erroForm"> 
 						<html:errors/>
 					</div>
 					
-					CNPJ<html:text property="cnpj" name="addProductForm"/>
-					Quantidade<html:text property="quantity" name="addProductForm"/> 
+					<bean:message key="label.cnpj"/><html:text property="cnpj" name="addProductForm"/>
+					<bean:message key="label.quantity"/><html:text property="quantity" name="addProductForm"/> 
 				
-					Produto
+					<bean:message key="label.product"/>
 					<html:select property="id">
-							<html:option value="0">Selecione o Produto</html:option>
+							<html:option value="0"><bean:message key="label.select.product"/></html:option>
 							<html:optionsCollection property="listProducts" label="description" value="id"/>
 					</html:select>
 						
 					<html:submit styleId="submitForm" value="Adicionar Produto"/> 
-			</html:form>
-		
-		
+		</html:form>
 		<br>
 		<table>
 			<tr>
-				<th>Produto</th>
-				<th>Quantidade</th>
-				<th>Valor unitário</th>
-				<th>Valor dos produtos</th>
-				<th>Excluir Item</th>
+				<th><bean:message key="label.product"/></th>
+				<th><bean:message key="label.quantity"/></th>
+				<th><bean:message key="label.unitary.value"/></th>
+				<th><bean:message key="label.product.value"/></th>
+				<th><bean:message key="label.remove"/></th>
 			</tr>
 			<logic:iterate id="itemRequest" name="addProductForm" property="listItems">
 			<tr>
@@ -60,15 +57,12 @@
 					</html:link> 
 				</td>
 			</tr>
-			 </logic:iterate>
+			</logic:iterate>
 			<tr>
 				<td colspan="3"></td>
-				
-				<td> Total</td>
-				<td> <bean:write name="addProductForm" property="total"  format="R$#,##0.00"/> </td>
-				
-			</tr>
-					
+				<td> <bean:message key="label.total"/> </td>
+				<td><bean:write name="addProductForm" property="total"  format="R$#,##0.00"/></td>	
+			</tr>			
 		</table>
 		<html:form action="/endRequest">
 			<html:submit styleId="submitForm" value="Finalizar Pedido"/>	
@@ -79,4 +73,3 @@
 	</div>	
 	</body>
 </html:html>
-

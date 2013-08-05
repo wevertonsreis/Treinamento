@@ -19,6 +19,10 @@ import com.system.validations.SecurityMd5;
 
 public class LoginForm extends ActionForm {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -346422099257556264L;
 	private String username;
 	private String password;
 

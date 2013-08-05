@@ -4,16 +4,15 @@
 
 <html:html>
 	<head>
-		<title>Meus Pedidos</title>
+		<title><bean:message key="label.my.request"/></title>
 		<link rel="stylesheet" type="text/css" href="style2.css">
 	</head>
 	<body>
 	<div align="center">
-		<h1>Meus Pedidos</h1>
+		<h1><bean:message key="label.my.request"/></h1>
 		<html:form action="/newRequest">
 			<html:submit styleId="submitForm" value="Novo Pedido"/>
 		</html:form>
-		
 		<table>
 			<tr>
 				<th>Número</th>
@@ -22,9 +21,9 @@
 				<th>Estado do Pedido</th>
 				<th>Criador</th>
 				<th>Data de Criação</th>
-				<th>Data de Emissão</th>
-				<th>Alterar</th>
-				<th>Excluir</th>
+				<th><bean:message key="label.date.emission"/></th>
+				<th><bean:message key="label.alter"/></th>
+				<th><bean:message key="label.remove"/></th>
 			</tr>
 			<logic:iterate id="loadRequest" name="addProductForm" property="listRequest">
 			<tr>
