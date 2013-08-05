@@ -24,7 +24,9 @@ public class LoadProductAction extends DispatchAction {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) 
 			throws Exception {
-		
+		/*
+		 * Searching products in the database.
+		 */
 		AddProductForm addProductForm = (AddProductForm) form;
 		
 		Session session = HibernateUtil.currentSession();

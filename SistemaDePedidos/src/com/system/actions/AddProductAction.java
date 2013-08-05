@@ -27,7 +27,9 @@ public class AddProductAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		
+		/*
+		 * Adding items in the request
+		 */
 		AddProductForm addProductForm = (AddProductForm) form;
 		
 		try {

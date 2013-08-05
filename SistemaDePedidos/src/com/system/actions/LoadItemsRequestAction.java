@@ -25,7 +25,9 @@ public class LoadItemsRequestAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		
+		/*
+		 * Loading the items on the screen
+		 */
 		AddProductForm loadItemRequestForm = (AddProductForm) form;
 		
 		try {

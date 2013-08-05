@@ -21,7 +21,9 @@ public class RemoveRequestAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		
+		/*
+		 * Removing requests.
+		 */
 		try {
 			Session session = HibernateUtil.currentSession();
 			Transaction tx= session.beginTransaction();		
