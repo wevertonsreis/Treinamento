@@ -25,7 +25,9 @@ public class EndRequestAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		
+		/*
+		 * Ending request and saving in database.
+		 */
 		AddProductForm addProductForm = (AddProductForm) form;
 		
 		if(addProductForm.getListItems().isEmpty()){

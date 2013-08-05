@@ -24,7 +24,9 @@ public class NewRequestAction extends Action {
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)throws Exception {
-		
+		/*
+		 * Creating a new request.
+		 */
 		AddProductForm addProductForm = (AddProductForm) form;
 		
 		Session session = HibernateUtil.currentSession();

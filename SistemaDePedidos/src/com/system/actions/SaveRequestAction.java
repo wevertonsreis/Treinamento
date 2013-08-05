@@ -20,7 +20,9 @@ public class SaveRequestAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		
+		/*
+		 * Saving the application and leaving the request open.
+		 */
 		AddProductForm addProductForm = (AddProductForm) form;
 		
 		try {

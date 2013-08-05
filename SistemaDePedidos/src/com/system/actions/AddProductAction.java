@@ -28,7 +28,7 @@ public class AddProductAction extends Action {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		/*
-		 * Adding items in the request
+		 * Adding items in the request.
 		 */
 		AddProductForm addProductForm = (AddProductForm) form;
 		
@@ -62,5 +62,4 @@ public class AddProductAction extends Action {
 		}
 		return mapping.findForward("loadItemsRequest");
 	}
-	
 }

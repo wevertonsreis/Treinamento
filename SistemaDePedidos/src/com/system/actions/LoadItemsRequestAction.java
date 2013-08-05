@@ -26,7 +26,7 @@ public class LoadItemsRequestAction extends Action {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		/*
-		 * Loading the items on the screen
+		 * Loading the items on the screen.
 		 */
 		AddProductForm loadItemRequestForm = (AddProductForm) form;
 		

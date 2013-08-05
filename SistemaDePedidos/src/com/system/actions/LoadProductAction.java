@@ -25,7 +25,7 @@ public class LoadProductAction extends DispatchAction {
 			HttpServletRequest request, HttpServletResponse response) 
 			throws Exception {
 		/*
-		 * Searching products in the database.
+		 * Searching products in the database and inserting in form.
 		 */
 		AddProductForm addProductForm = (AddProductForm) form;
 		

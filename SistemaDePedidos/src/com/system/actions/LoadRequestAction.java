@@ -24,7 +24,9 @@ public class LoadRequestAction extends Action {
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
+		/*
+		 * Searching requests in the database and inserting in form.
+		 */
 		AddProductForm loadRequestForm = (AddProductForm) form;
 		
 		try{

@@ -25,7 +25,9 @@ public class AlterRequestAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		
+		/*
+		 * Searching request in database and preparing the screen for edition.
+		 */
 		AddProductForm loadRequestForm = (AddProductForm) form;
 		
 		try {
