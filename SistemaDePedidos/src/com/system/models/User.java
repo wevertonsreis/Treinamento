@@ -1,7 +1,13 @@
 package com.system.models;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5022451039810259159L;
 	private Long id;
 	private String username;
 	private String password;

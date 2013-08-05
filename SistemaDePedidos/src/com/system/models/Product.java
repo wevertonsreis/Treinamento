@@ -7,7 +7,7 @@ public class Product implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1571989637944776582L;
 	private Long id;
 	private String description;
 	private double unitaryValue;
@@ -47,7 +47,4 @@ public class Product implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	
-	
 }

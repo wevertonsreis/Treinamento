@@ -3,7 +3,7 @@
 
 <struts-config> 
         
-         <form-beans>
+        <form-beans>
         	<form-bean name="loginForm" type="com.system.forms.LoginForm"/>
         	<form-bean name="addProductForm" type="com.system.forms.AddProductForm"/>
         </form-beans>

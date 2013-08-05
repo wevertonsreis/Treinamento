@@ -4,12 +4,12 @@
 
 <html:html>
 	<head>
-		<title>Sistema de Pedidos</title>
+		<title><bean:message key="label.system.request"/></title>
 		<link rel="stylesheet" type="text/css" href="style2.css">
 	</head>
 	<body>
 	<div align="center">
-		<h1>Sistema de Pedidos</h1>
+		<h1><bean:message key="label.system.request"/></h1>
 		<div id="okForm">Pedido finalizado com sucesso!</div>
 		<br>
 		<html:form action="loadRequest" >

@@ -4,13 +4,15 @@
 
 <html:html>
 	<head>
-		<title>Erro</title>
+		<title><bean:message key="error"/></title>
 		<link rel="stylesheet" type="text/css" href="style2.css">
 	</head>
 	<body>
 	<div align="center">
-		<h1>Sistema de Pedidos</h1>
-		<div id="erroForm">Não se pode alterar um pedido já aprovado!</div>
+		<h1><bean:message key="label.system.request"/></h1>
+		<div id="erroForm">
+			<bean:message key="error.alter.request"/>
+		</div>
 		<br>
 		<html:form action="loadRequest" >
 			<html:submit styleId="submitForm" value="Meus Pedidos"/>

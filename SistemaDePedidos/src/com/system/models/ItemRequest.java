@@ -7,7 +7,7 @@ public class ItemRequest implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 123725802310710462L;
 	private Long id;
 	private int quantity;
 	private double valueProducts;

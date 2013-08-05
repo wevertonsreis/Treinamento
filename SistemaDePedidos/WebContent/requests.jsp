@@ -15,12 +15,12 @@
 		</html:form>
 		<table>
 			<tr>
-				<th>Número</th>
-				<th>CNPJ</th>
-				<th>CNPJ Cliente</th>
-				<th>Estado do Pedido</th>
-				<th>Criador</th>
-				<th>Data de Criação</th>
+				<th><bean:message key="label.number"/></th>
+				<th><bean:message key="label.cnpj"/></th>
+				<th><bean:message key="label.cnpj.client"/></th>
+				<th><bean:message key="label.status.request"/></th>
+				<th><bean:message key="label.creator"/></th>
+				<th><bean:message key="label.date.criation"/></th>
 				<th><bean:message key="label.date.emission"/></th>
 				<th><bean:message key="label.alter"/></th>
 				<th><bean:message key="label.remove"/></th>

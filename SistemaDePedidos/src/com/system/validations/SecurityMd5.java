@@ -14,7 +14,6 @@ public class SecurityMd5 {
 			MessageDigest md = MessageDigest.getInstance("MD5");
 			BigInteger has = new BigInteger(1, md.digest(word.getBytes()));
 			wordTransformed = has.toString(16);
-			
 		} 
 		catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
@@ -23,5 +22,4 @@ public class SecurityMd5 {
 		
 		return wordTransformed;
 	}
-	
 }

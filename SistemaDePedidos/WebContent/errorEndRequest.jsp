@@ -4,13 +4,13 @@
 
 <html:html>
 	<head>
-		<title>Erro</title>
+		<title><bean:message key="error"/></title>
 		<link rel="stylesheet" type="text/css" href="style2.css">
 	</head>
 	<body>
 	<div align="center">
-		<h1>Sistema de Pedidos</h1>
-		<div id="erroForm">Erro ao finalizar o pedido verifique e tente novamente!</div>
+		<h1><bean:message key="label.system.request"/></h1>
+		<div id="erroForm">  <bean:message key="error.end.request"/> </div>
 		<br>
 		<html:form action="/loadProduct">
 			<html:submit styleId="submitForm" value="Voltar"></html:submit>
@@ -18,4 +18,3 @@
 	</div>	
 	</body>
 </html:html>
-

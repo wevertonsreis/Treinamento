@@ -151,5 +151,4 @@ public class AddProductForm extends ActionForm {
 		
 		return errors;
 	}
-	
 }

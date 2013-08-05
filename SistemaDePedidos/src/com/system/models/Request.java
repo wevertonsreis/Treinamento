@@ -5,11 +5,11 @@ import java.util.Date;
 import java.util.List;
 
 public class Request implements Serializable{
+	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-	
+	private static final long serialVersionUID = 2262437819104786951L;
 	private Long id;
 	private String cnpj;
 	private String cnpjClient;
