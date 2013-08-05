@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping package="com.system.models">
+
+	<class name="ItemRequest" table="item_request">
+	
+		<id name="id" type="java.lang.Long">
+            <column name="id" not-null="true"/>
+            <generator class="increment"/>
+        </id>        
+		
+		<many-to-one name="product" class="com.system.models.Product" column="product_id"/>
+		<many-to-one name="req" class="com.system.models.Request" column="request_id"/>
+		
+		<property name="quantity" type="int">
+            <column name="quantity" not-null="true"/>
+        </property>
+		
+	</class>
+	
+</hibernate-mapping>

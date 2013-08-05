@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration
+    PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <property name="hibernate.connection.username">scale</property>  
+        <property name="hibernate.connection.password">scale</property>  
+        <property name="hibernate.connection.url">jdbc:jtds:sqlserver://WSERVER/SQLSERVER;databaseName=Treinamento Scale Systems</property>  
+        <property name="hibernate.connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>  
+        <property name="hibernate.dialect">net.sf.hibernate.dialect.SQLServerDialect</property>  
+		<property name="hbm2ddl.auto">update</property>
+		
+        <mapping resource="com/system/hbms/User.hbm.xml"/>
+        <mapping resource="com/system/hbms/Product.hbm.xml"/>
+        <mapping resource="com/system/hbms/Request.hbm.xml"/>
+       	<mapping resource="com/system/hbms/ItemRequest.hbm.xml"/>
+
+    </session-factory>
+
+</hibernate-configuration>

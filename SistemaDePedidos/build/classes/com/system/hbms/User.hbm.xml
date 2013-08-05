@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping
+    PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping package="com.system.models">
+
+    <class name="User" table="user_validation">
+
+        <id name="id" type="java.lang.Long">
+            <column name="id" not-null="true"/>
+            <generator class="increment"/>
+        </id>
+
+        <property name="username" type="java.lang.String">
+            <column name="user_username" length="300" not-null="true"/>
+        </property>
+
+        <property name="password" type="java.lang.String">
+            <column name="user_password" length="300"  not-null="true"/>
+        </property>
+
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,141 @@
+#loginForm{
+	position:absolute;
+	left: 35%;
+	top: 10%;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	border-style:solid;
+	border-width:1px;
+	background: aqua;
+	background-position: center;
+	border-radius: 10px;
+	border-color: #778899;
+}
+
+table{
+	width: 950px;
+	border-style:solid;
+	border-width:1px;
+	background: aqua;
+	background-position: center;
+	border-radius: 5px;
+	border-color: #778899;
+}
+
+#addProductForm{
+	padding-bottom: 20px;
+	
+	border-style:solid;
+	border-width:1px;
+	background: aqua;
+	background-position: center;
+	border-radius: 10px;
+	border-color: #778899;
+	width: 950;
+	font-family: Consolas;
+
+}
+
+th{
+	background-color: #ccc;
+	border-color: black;
+}
+
+tr{
+	background-color: white;
+	border-color: #778899;
+	
+}
+
+td{
+	
+	border-color: black;
+	text-align: center;
+	font-family: Consolas;
+}
+
+#testForm{
+	font-family: Consolas;
+}
+
+#submitForm{
+	
+	font-size: 16px;
+	text-align:center;
+	background-color: #E8E8E8;
+	
+	font-family: Consolas;
+	
+}
+
+button{
+	
+	font-size: 16px;
+	text-align:center;
+	background-color: #E8E8E8;
+	
+	font-family: Consolas;
+	
+}
+
+#erroForm{
+	text-align: center;
+	font-family: Consolas;
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: FF6666;
+	color: white;
+}
+
+#okForm{
+	text-align: center;
+	font-family: Consolas;
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: white;
+	color: black;
+}
+
+h1{
+	font-family: Consolas;
+	text-align: center;
+}
+
+.field{
+	width:335px;
+	margin:15px 0;
+}
+
+.field label{
+	color:#777;
+	display:block;
+	font-size:1em;
+	font-weight:700;
+	margin-bottom:5px;
+	text-align:left;
+}
+
+.field input{
+	border:1px solid #ccc;
+	font-size:1.2em;
+	width:100%;
+	padding:5px;
+}
+
+body{
+	background-color:#00BFFF;
+}
+
+h1{
+	color: white;
+	font-size: 50px;
+	padding-bottom: -15px;
+}
+
+p{
+	font-family: Consolas;
+}
+
+        

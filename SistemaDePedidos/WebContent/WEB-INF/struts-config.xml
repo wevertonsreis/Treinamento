@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd"> 
+
+<struts-config> 
+        
+         <form-beans>
+        	<form-bean name="loginForm" type="com.system.forms.LoginForm"/>
+        	<form-bean name="addProductForm" type="com.system.forms.AddProductForm"/>
+        </form-beans>
+        
+        <global-forwards>
+        	<forward name="login" path="/login.jsp"/>
+        	<forward name="index" path="/index.jsp"/>
+        	<forward name="requests" path="/requests.jsp"/>
+        	<forward name="addProduct" path="/addProduct.do"/>
+        	<forward name="okEndRequest" path="/okEndRequest.jsp"/>
+        	<forward name="errorEndRequest" path="/errorEndRequest.jsp"/>
+        	<forward name="errorAlterRequest" path="/errorAlterRequest.jsp"/>
+        	<forward name="loadItemsRequest" path="/loadItemsRequest.do"/>
+        	<forward name="loadProduct" path="/loadProduct.do"/>	
+        	<forward name="loadRequest" path="/loadRequest.do"/>
+        	<forward name="endRequest" path="/endRequest.do"/>
+        	<forward name="removeItem" path="/removeItem.do"/>
+        	<forward name="newRequest" path="/newRequest.do"/>
+        	<forward name="saveRequest" path="/saveRequest.do"/>
+        </global-forwards>
+        
+        <action-mappings>
+        	
+        	<action path="/login"	
+        			input="/login.jsp"
+        			scope="session"
+        			name="loginForm"
+        			type="com.system.actions.LoginAction"
+        			validate="true"/>
+        			
+        	<action path="/addProduct"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.AddProductAction"
+        			validate="true"
+        			parameter="function"/>	
+        			
+        	<action path="/loadItemsRequest"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.LoadItemsRequestAction"
+        			validate="true"
+        			parameter="function"/>	
+        			
+        	<action path="/loadProduct"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.LoadProductAction"
+        			validate="true"/>	
+		
+        	<action path="/endRequest"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.EndRequestAction"
+        			validate="true"/>	
+        			
+        	<action path="/newRequest"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.NewRequestAction"
+        			validate="true"/>	
+        			
+        	<action path="/saveRequest"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.SaveRequestAction"
+        			validate="true"/>	
+        			
+        	<action path="/removeItem"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.RemoveItemAction"
+        			validate="true"/>
+        			
+        	<action path="/loadItemsRequest"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.LoadItemsRequestAction"
+        			validate="true"/>	
+        			
+        	<action path="/loadRequest"
+        			input="/resquests.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.LoadRequestAction"
+        			validate="true"/>	
+        			
+        	<action path="/removeRequest"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.RemoveRequestAction"
+        			validate="true"/>
+        			
+        	<action path="/alterRequest"
+        			input="/index.jsp"
+        			scope="session"
+        			name="addProductForm"
+        			type="com.system.actions.AlterRequestAction"
+        			validate="true"/>
+        				
+       	 </action-mappings>
+        
+        <message-resources parameter="com.system.resource.MessageResources"/>
+
+</struts-config> 
