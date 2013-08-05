@@ -9,7 +9,6 @@
 	<body>
 	<div id="loginForm">
 		<h1>Sistema de Pedidos</h1>
-	
 		<div id="erroForm"> 
 			<html:errors/>
 		</div>
