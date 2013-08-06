@@ -7,7 +7,9 @@ import java.security.NoSuchAlgorithmException;
 public class SecurityMd5 {
 	
 	public static String transform(String word){
-		
+		/*
+		 * Transformation the password for the type hash.
+		 */
 		String wordTransformed = null;
 		
 		try {
