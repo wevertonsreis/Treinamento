@@ -10,9 +10,11 @@
 	<body>
 	<div align="center">
 		<h1><bean:message key="label.my.request"/></h1>
+		<!-- Action for create a new request -->
 		<html:form action="/newRequest">
 			<html:submit styleId="submitForm" value="Novo Pedido"/>
 		</html:form>
+		<!-- Table with the requests -->
 		<table>
 			<tr>
 				<th><bean:message key="label.number"/></th>
@@ -49,11 +51,13 @@
 					<bean:write name="loadRequest" property="emissionDate" format="dd/MM/yyyy"/>
 				</td>
 				<td>
+					<!-- Action for alter the request -->
 					<html:link action="/alterRequest" paramId="id" paramName="loadRequest" paramProperty="id" >
 						<html:image  src="images/edit.png" />
 					</html:link>
 				</td>
 				<td>
+					<!-- Action for remove the request -->
 					<html:link action="/removeRequest" paramId="id" paramName="loadRequest" paramProperty="id" >
 						<html:image  src="images/delete.png" />
 					</html:link>

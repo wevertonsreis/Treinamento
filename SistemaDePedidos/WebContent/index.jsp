@@ -10,7 +10,7 @@
 	<body>
 	<div align="center">
 		<h1><bean:message key="label.system.request"/></h1>
-		
+		<!-- Form for add items of request -->
 		<html:form styleId="addProductForm" action="/addProduct">
 					<h4><bean:message key="label.add.product"/></h4>
 					<div id="erroForm"> 
@@ -29,6 +29,7 @@
 					<html:submit styleId="submitForm" value="Adicionar Produto"/> 
 		</html:form>
 		<br>
+		<!-- Listing the items of request -->
 		<table>
 			<tr>
 				<th><bean:message key="label.product"/></th>
@@ -52,6 +53,7 @@
 					 <bean:write name="itemRequest" property="valueProducts" format="R$#,###.00"/>
 				</td>
 				<td>	
+					<!-- Action for remove item of request -->
 					<html:link action="/removeItem" paramId="id" paramName="itemRequest" paramProperty="id" >
 						<html:image  src="images/delete.png" />
 					</html:link> 
@@ -64,9 +66,11 @@
 				<td><bean:write name="addProductForm" property="total"  format="R$#,##0.00"/></td>	
 			</tr>			
 		</table>
+		<!-- Action for ending request -->
 		<html:form action="/endRequest">
 			<html:submit styleId="submitForm" value="Finalizar Pedido"/>	
-		</html:form>		
+		</html:form>	
+		<!-- Action for save request and leaving open -->	
 		<html:form action="saveRequest">
 			<html:submit styleId="submitForm" value="Meus Pedidos"/>
 		</html:form>

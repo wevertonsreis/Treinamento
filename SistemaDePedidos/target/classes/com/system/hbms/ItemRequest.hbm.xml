@@ -12,6 +12,7 @@
             <generator class="increment"/>
         </id>        
 		
+		<!-- Relation of tables in system -->
 		<many-to-one name="product" class="com.system.models.Product" column="product_id"/>
 		<many-to-one name="req" class="com.system.models.Request" column="request_id"/>
 		
