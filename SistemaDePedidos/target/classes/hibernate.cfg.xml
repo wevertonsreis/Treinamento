@@ -7,7 +7,8 @@
 <hibernate-configuration>
 
     <session-factory>
-
+		
+		<!-- Properties for connection with database -->
         <property name="hibernate.connection.username">scale</property>  
         <property name="hibernate.connection.password">scale</property>  
         <property name="hibernate.connection.url">jdbc:jtds:sqlserver://WSERVER/SQLSERVER;databaseName=Treinamento Scale Systems</property>  
@@ -15,6 +16,7 @@
         <property name="hibernate.dialect">net.sf.hibernate.dialect.SQLServerDialect</property>  
 		<property name="hbm2ddl.auto">update</property>
 		
+		<!-- Location of hbms.xml -->
         <mapping resource="com/system/hbms/User.hbm.xml"/>
         <mapping resource="com/system/hbms/Product.hbm.xml"/>
         <mapping resource="com/system/hbms/Request.hbm.xml"/>

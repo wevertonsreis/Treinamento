@@ -21,9 +21,8 @@ public class LoginAction extends Action {
 		
 		request.setAttribute("username", loginForm.getUsername());
 		
+		//Go to action that load the requests.
 		return mapping.findForward("loadRequest");
-		
 	}
-	
 	
 }

@@ -21,6 +21,7 @@ import com.system.persistence.HibernateUtil;
 
 public class AddProductAction extends Action {
 	
+	//Constant for representation a business.
 	private static final String CNPJ = "62807253000129";
 	
 	@Override
@@ -36,8 +37,11 @@ public class AddProductAction extends Action {
 			Session session = HibernateUtil.currentSession();
 			Transaction tx= session.beginTransaction();		
 			
+			//Searching products in database.
 			Query queryProduct = session.createQuery("From Product where id= :idSelect");
 			queryProduct.setString("idSelect", request.getParameter("id").toString());
+			
+			//Catching a one result in database according with the select option.
 			Product p = (Product) queryProduct.uniqueResult();	
 						
 			addProductForm.getReq().setCnpj(CNPJ);

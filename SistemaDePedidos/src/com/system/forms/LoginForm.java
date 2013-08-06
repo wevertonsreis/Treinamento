@@ -46,7 +46,9 @@ public class LoginForm extends ActionForm {
 	
 	@Override
 	public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
-		
+		/*
+		 * Validation of fields, user name and password.
+		 */
 		ActionErrors errors = new ActionErrors();
 		
 		if(username == null && password == null){

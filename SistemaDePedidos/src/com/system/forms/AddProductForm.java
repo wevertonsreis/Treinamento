@@ -122,7 +122,9 @@ public class AddProductForm extends ActionForm {
 	@Override
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
-		
+		/*
+		 * Validation of fields.
+		 */
 		ActionErrors errors = new ActionErrors();
 		
 		try{
