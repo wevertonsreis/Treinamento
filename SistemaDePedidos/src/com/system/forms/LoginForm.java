@@ -16,6 +16,7 @@ import com.system.models.User;
 import com.system.persistence.HibernateUtil;
 import com.system.validations.SecurityMd5;
 
+@SuppressWarnings("serial")
 public class LoginForm extends ActionForm {
 
 	private String username;
