@@ -9,7 +9,9 @@ import net.sf.hibernate.SessionFactory;
 import net.sf.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
-	
+	/*
+	 * Utility for connection.
+	 */
 	private static Log log = LogFactory.getLog(HibernateUtil.class);
 
     private static final SessionFactory sessionFactory;
