@@ -12,9 +12,11 @@
 		<h1><bean:message key="label.system.request"/></h1>
 		<div id="okForm">Pedido finalizado com sucesso!</div>
 		<br>
+		<!-- Action for go back request page -->
 		<html:form action="loadRequest" >
 			<html:submit styleId="submitForm" value="Meus Pedidos"/>
 		</html:form>
+		<!-- Action for creation of new request -->
 		<html:form action="newRequest">
 			<html:submit styleId="submitForm" value="Novo Pedido"/>
 		</html:form>

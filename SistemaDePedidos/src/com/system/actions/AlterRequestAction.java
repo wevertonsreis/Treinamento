@@ -34,32 +34,40 @@ public class AlterRequestAction extends Action {
 			Session session = HibernateUtil.currentSession();
 			Transaction tx= session.beginTransaction();		
 
+			//Searching request where id equal select id in jsp page.
 			Query query = session.createQuery("From Request r where r.id=:id");
-
 			query.setParameter("id", request.getParameter("id").toString());
-
+			
+			//Returning only one result.
 			Request req = (Request) query.uniqueResult();
-
+			
+			//But if request is okay, You can't alter.
 			if(req.getStatus().equals("Aprovado")){
 				return mapping.findForward("errorAlterRequest");
 			}
-
+			
+			//Setting form with new request.
 			loadRequestForm.setReq(req);
-
+			
+			//Searching items of request in database. 
 			Query queryI = session.createQuery("From ItemRequest i where i.req.id= :request");
 			queryI.setParameter("request", loadRequestForm.getReq().getId());
-
+			
+			//Adding items for one list.
 			@SuppressWarnings("unchecked")
 			List<ItemRequest> list = queryI.list();
-
+			
+			//Sum total of items.
 			double total = 0;
 			for(ItemRequest i : list){
 				i.setValueProducts(i.getQuantity()*i.getProduct().getUnitaryValue());
 				total = i.getValueProducts() + total;
 			}
-
+			
+			//Adding this sum for form.
 			loadRequestForm.setTotal(total);
-
+			
+			//Setting form with the list items.
 			loadRequestForm.setListItems(list);
 
 			tx.commit();
@@ -69,6 +77,7 @@ public class AlterRequestAction extends Action {
 		catch (Exception e) {
 				e.getMessage();
 		}	
+		//Go to action responsible for loading products.
 		return mapping.findForward("loadProduct");
 	}
 }

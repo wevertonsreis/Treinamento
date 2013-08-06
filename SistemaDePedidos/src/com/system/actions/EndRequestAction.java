@@ -30,6 +30,7 @@ public class EndRequestAction extends Action {
 		 */
 		AddProductForm addProductForm = (AddProductForm) form;
 		
+		//You can't ending request with no items.
 		if(addProductForm.getListItems().isEmpty()){
 			return mapping.findForward("errorEndRequest");
 		}
@@ -40,6 +41,7 @@ public class EndRequestAction extends Action {
 			
 			List<ItemRequest> list = addProductForm.getListItems();
 			
+			//Setting informations and ending request.
 			for(ItemRequest it : list){
 				it.getReq().setCnpj("62807253000129");
 				it.getReq().setEmissionDate(new Date());
@@ -58,6 +60,7 @@ public class EndRequestAction extends Action {
 			e.getMessage();
 		}
 		
+		//Clean list items and total.
 		addProductForm.setListItems(new ArrayList<ItemRequest>());
 		addProductForm.setTotal(0);
 		

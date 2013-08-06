@@ -12,7 +12,7 @@
 		<h1><bean:message key="label.system.request"/></h1>
 		<div id="erroForm">  <bean:message key="error.end.request"/> </div>
 		<br>
-		<!-- Action for back load products -->
+		<!-- Action for back page of edition request -->
 		<html:form action="/loadProduct">
 			<html:submit styleId="submitForm" value="Voltar"></html:submit>
 		</html:form>

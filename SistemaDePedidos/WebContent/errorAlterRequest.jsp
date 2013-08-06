@@ -14,7 +14,7 @@
 			<bean:message key="error.alter.request"/>
 		</div>
 		<br>
-		<!-- Action for go back load request -->
+		<!-- Action for go back page request -->
 		<html:form action="loadRequest" >
 			<html:submit styleId="submitForm" value="Meus Pedidos"/>
 		</html:form>

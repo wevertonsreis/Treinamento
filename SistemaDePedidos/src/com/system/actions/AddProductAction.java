@@ -21,7 +21,7 @@ import com.system.persistence.HibernateUtil;
 
 public class AddProductAction extends Action {
 	
-	//Constant for representation a business.
+	//Constant for representation of business.
 	private static final String CNPJ = "62807253000129";
 	
 	@Override
@@ -43,19 +43,23 @@ public class AddProductAction extends Action {
 			
 			//Catching a one result in database according with the select option.
 			Product p = (Product) queryProduct.uniqueResult();	
-						
+					
+			//Setting the request in form.
 			addProductForm.getReq().setCnpj(CNPJ);
 			addProductForm.getReq().setCnpjClient(addProductForm.getCnpj());
 			addProductForm.getReq().setCreationDate(new Date());
 			addProductForm.getReq().setCreator(addProductForm.getCreator());
 			
+			//Creating new item request.
 			ItemRequest it = new ItemRequest();
 			it.setQuantity(addProductForm.getQuantity());	
 			it.setProduct(p);	
 			it.setReq(addProductForm.getReq());
-
+			
+			//Saving item request in database.
 			session.saveOrUpdate(it);
 			
+			//adding item request in form.
 			addProductForm.getListItems().add(it);
 			
 			tx.commit();
@@ -64,6 +68,7 @@ public class AddProductAction extends Action {
 		catch (Exception e) {
 			e.getMessage();
 		}
+		//Loading page with the new item added.
 		return mapping.findForward("loadItemsRequest");
 	}
 }
