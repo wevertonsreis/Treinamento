@@ -17,10 +17,7 @@
 		<property name="hbm2ddl.auto">update</property>
 		
 		<!-- Location of hbms.xml -->
-        <mapping resource="com/system/hbms/User.hbm.xml"/>
-        <mapping resource="com/system/hbms/Product.hbm.xml"/>
-        <mapping resource="com/system/hbms/Request.hbm.xml"/>
-       	<mapping resource="com/system/hbms/ItemRequest.hbm.xml"/>
+        <mapping resource="com/hbms/Contact.hbm.xml"/>
 
     </session-factory>
 
