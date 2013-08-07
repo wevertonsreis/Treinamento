@@ -28,19 +28,15 @@ public class RegisterAction extends DispatchAction {
 		Session session = HibernateUtil.currentSession();
 		Transaction tx = session.beginTransaction();
 		
-		Query query = session.createQuery("from contact");
+		Contact contact = new Contact();
+		contact.setName(registerForm.getName());
+		contact.setFone(registerForm.getFone());
 		
-		List<Contact> list = query.list();
+		session.save(contact);
 		
-		registerForm.setListContact(list);
+		tx.commit();
+		session.close();
 		
-		System.out.println("Save");
-		return mapping.getInputForward();
-	}
-	
-	public ActionForward remove(ActionMapping mapping, ActionForm form,
-			HttpServletRequest request, HttpServletResponse response) throws Exception {
-		System.out.println("Remove");
 		return mapping.getInputForward();
 	}
 	
