@@ -4,7 +4,7 @@
 <struts-config> 
         
         <form-beans>
-        	<form-bean name="registerForm" type="com.forms.RegisterForm"></form-bean>
+        	<form-bean name="registerForm" type="com.forms.RegisterForm"/>
         </form-beans>
         
         <global-forwards>
@@ -14,10 +14,11 @@
         <action-mappings>
         
         	<action path="/register"
+        			parameter="method"
         			input="/register.jsp"
-        			scope="request"
-        			name="requestForm"
-        			type="com.action.RequestAction"
+        			scope="session"
+        			name="registerForm"
+        			type="com.actions.RegisterAction"
         			validate="true"/>	
         						
        	</action-mappings>
